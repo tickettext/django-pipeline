@@ -63,6 +63,10 @@ class Package(object):
     def compiler_options(self):
         return self.config.get('compiler_options', {})
 
+    @property
+    def compress_group(self):
+        return self.config.get('compress_group', True)
+
 
 class Packager(object):
     def __init__(self, storage=None, verbose=False, css_packages=None, js_packages=None):
